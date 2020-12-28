@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
 
 
     //Rutas a las que se permitirá acceso
-    Route::get('/wallet/{user}', 'WalletController@show')->name('wallet.show')->middleware('auth:api');
+    Route::get('/wallet/{user}', 'WalletController@show')->name('wallet.show');
 
     Route::post('/transfer', 'TransferController@store')->name('transfer.save')->middleware('auth:api');
 
