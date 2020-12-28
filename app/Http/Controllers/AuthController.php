@@ -23,6 +23,8 @@ class AuthController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
+        app('App\Http\Controllers\WalletController')->store($user->id);
+        
         return response()->json($user);
     }
 
